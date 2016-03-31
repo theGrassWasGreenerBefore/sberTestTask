@@ -4,8 +4,17 @@ body {
 	background: #b5b4c0;
 }
 
+a, a img {
+	border: none;
+	outline: none;
+}
+
+input {
+	outline: none;
+}
+
 #container {
-	width: 1883px;
+	padding: 19px;
 }
 
 .clear {
@@ -16,14 +25,7 @@ body {
 	overflow: hidden;
 }
 
-#wrapper {
-	width: 1187px;
-	padding: 19px;
-	margin: 0 auto !important;
-}
-
 #content {
-	margin: 0 auto !important;
 	width: 1187px;
 	
 	
@@ -38,6 +40,7 @@ body {
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
+/*	filter: progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=0, Strength=3); */
 }
 
 
@@ -130,6 +133,7 @@ body {
 	border: none;
 	background: none;
 	outline: none;
+	text-align: right;
 	
 	font: 40px 'bebasneue_book', sans-serif;
 	color: #000;
@@ -166,11 +170,183 @@ body {
 /* Account Block */
 
 .account_block {
-	padding: 16px 0 30px;
+	padding: 16px 83px 30px 0;
 }
 
 .account_block .ab_select_wrap {
 	height: 64px;
 	border: 1px solid #929292;
 	margin: 3px 0 0 -5px;
+	position: relative;
+}
+
+/* ToolTip */
+
+.ab_tooltip {
+	position: absolute;
+	left: 1070px;
+	top: -10px;
+	display: none;
+	
+	background: white;
+	width: 400px;
+	padding: 24px 21px 20px;
+	
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	
+	font: 14px 'bebasneue_book', sans-serif;
+	color: #333;
+}
+
+.ab_tooltip div {
+	padding: 0 0 12px;
+}
+
+.ab_tooltip div span {
+	color: #929292;
+}
+
+.ab_tooltip div.abtt_title {
+	font-size: 16px;
+	color: #929292;
+	padding: 0 0 13px;
+}
+
+.ab_tooltip table {
+	margin: 14px 0 0;
+	border-collapse: collapse;
+}
+
+
+.ab_tooltip table td {
+	text-align: left;
+}
+
+.ab_tooltip table td.abt_title {
+	color: #929292;
+}
+
+/* Clickable overlay */
+
+.abs_overlay {
+	position: absolute;
+	left: -1px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+	cursor: pointer;
+	background: url(../img/elements/icons_arrow_d_dw.png) 98% center no-repeat;
+}
+
+.abs_overlay .abso_frame {
+	position: absolute;
+	bottom: 1px;
+	width: 100%;
+	height: 1px;
+	border: 1px solid #929292;
+	
+}
+
+/* Single object */
+
+.abs_object {
+	position: relative;
+	height: 64px;
+	font-size: 20px;
+}
+
+.abs_chosen_top {
+	background: #3fc33e;
+	background: -moz-linear-gradient(top,  #3fc33e 0%, #37ac36 100%);
+	background: -webkit-linear-gradient(top,  #3fc33e 0%,#37ac36 100%);
+	background: linear-gradient(to bottom,  #3fc33e 0%,#37ac36 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fc33e', endColorstr='#37ac36',GradientType=0 );
+	
+	color: white;
+}
+
+.abs_object .abso_icon {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 64px;
+	height: 43px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.abs_safe .abso_icon {
+	background-image: url(../img/products/icon_depositariy64.png);
+}
+
+.abs_safe.abs_locked .abso_icon {
+	background-image: url(../img/products/icon_depositariy64Blocked.png);
+}
+
+.abs_master .abso_icon {
+	background-image: url(../img/products/icon_cards_m64.png);
+}
+
+.abs_master.abs_locked .abso_icon {
+	background-image: url(../img/products/icon_cards_m64Blocked.png);
+}
+
+.abs_visa .abso_icon {
+	background-image: url(../img/products/icon_cards_v64.png);
+}
+
+.abs_visa.abs_locked .abso_icon {
+	background-image: url(../img/products/icon_cards_v64Blocked.png);
+}
+
+.abs_object .abso_title {
+	position: absolute;
+	left: 85px;
+	top: 20px;
+	width: 922px;
+}
+
+.abs_object .abso_title .absot_state {
+	color: #f00;
+}
+
+.abs_object .abso_price {
+	position: absolute;
+	top: 20px;
+	right: 62px;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.abs_object .abso_price .absop_kop {
+	font-size: 16px;
+}
+
+/* hidden block */
+
+.abs_list_block {
+	position: absolute;
+	left: -1px;
+	top: 64px;
+	width: 1067px;
+	background: #f5f5f5;
+	border-left: 1px solid #29a137;
+	border-right: 1px solid #29a137;
+	border-bottom: 1px solid #29a137;
+	
+	z-index: 10;
+}
+
+.abs_list_block .abs_object {
+	position: relative;
+	border-bottom: 1px solid #29a137;
+	height: 66px;
+}
+
+#content #c_middle .absl_title {
+	padding: 2px 5px 6px 12px;
+	border-bottom: 1px solid #29a137;
 }
