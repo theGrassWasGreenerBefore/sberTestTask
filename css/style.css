@@ -337,13 +337,19 @@ input {
 	border-right: 1px solid #29a137;
 	border-bottom: 1px solid #29a137;
 	
+	display: none;
 	z-index: 10;
+}
+
+.absl_shown {
+	display: block;
 }
 
 .abs_list_block .abs_object {
 	position: relative;
 	border-bottom: 1px solid #29a137;
 	height: 66px;
+	cursor: pointer;
 }
 
 #content #c_middle .absl_title {
