@@ -1,15 +1,5 @@
 
 function init() {
-	/*
-	$(document).click(function(){
-		$('.abs_list_block').hide();
-	});
-	*/
-	/*
-	$('.ab_select_wrap *').click(function(e){
-		e.stopPropogation();
-	});
-	*/
 	
 	$('.ab_select_wrap').click(function(e){
 		
