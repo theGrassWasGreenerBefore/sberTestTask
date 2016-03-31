@@ -1,12 +1,13 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: black;
 }
 
 #content {
 	margin: 0 auto !important;
 	width: 960px;
 	padding: 50px 10px 30px;
-	visibility: hidden;
+	
+	font: 40px "Conv_SeroPro-Bold", sans-serif;
+	color: #333;
 }
