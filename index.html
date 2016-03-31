@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <title>To Do List</title>
+  <title>Sber Test Task</title>
 
   <!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,10 +18,55 @@
 	
 </head>
 <body>
-	<div id="content">
-		Выберите счет списания, счет зачисления и какую сумму требуется перевести!
+	<div id="container">
+		<div id="wrapper">
+			<section id="content">
+				<div id="c_top">
+					<div id="ct_content">
+						<span class="hotkey">Прервать операцию F12</span>
+						<span class="title">Перевод между счетами</span>
+						
+						<div class="clear"><br /></div>
+					</div>
+				</div>
+				<div id="c_middle">
+					<div id="cm_content">
+						<div id="cm_title">Выберите счет списания, счет зачисления и какую сумму<br />требуется перевести</div>
+						
+						<div class="account_block" id="writeoff_account">
+							<span class="ab_title small_title">счет списания</span>
+							<div class="ab_select_wrap">
+								
+							</div>
+						</div>
+						
+						<div class="down_arrow"><a href="#"><img src="img/elements/down-arrow.png" alt="Didn't get the reason of this thing here... But... O.K..." /></a></div>
+						
+						<div class="account_block" id="enrollment_account">
+							<span class="ab_title small_title">счет зачисления</span>
+							<div class="ab_select_wrap">
+								
+							</div>
+						</div>
+						
+						<div id="input_text_block">
+							<form>
+								<span class="itb_title small_title">Введите сумму и нажмите Enter</span>
+								<div class="input_text_wrap">
+									<input type="text" value="" />
+								</div>
+								<span class="itb_sub">рубль РФ</span>
+								<div class="clear"><br /></div>
+							</form>
+						</div>
+						
+						<a href="#" id="btn_next"><img alt="Далее" src="img/elements/btn_next.png" /></a>
+						<div class="clear"><br /></div>
+					</div>
+				</div>
+			</section>
+		</div>
 	</div>
-	
 	<script>
 		init();
     </script>

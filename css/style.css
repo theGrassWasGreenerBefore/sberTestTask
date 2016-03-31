@@ -1,13 +1,174 @@
 body {
 	padding: 0;
 	margin: 0;
+	background: #b5b4c0;
+}
+
+#container {
+	width: 1883px;
+}
+
+.clear {
+	clear: both;
+	float: none;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+#wrapper {
+	width: 1187px;
+	padding: 19px;
+	margin: 0 auto !important;
 }
 
 #content {
 	margin: 0 auto !important;
-	width: 960px;
-	padding: 50px 10px 30px;
+	width: 1187px;
 	
-	font: 40px "Conv_SeroPro-Bold", sans-serif;
+	
+	
+	background: #e1e1e3;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+
+#content #c_top {
+	
+	height: 50px;
+	font: 14px 'bebasneue_book', sans-serif;
+	color: #929292;
+	
+	
+}
+
+#content #c_top #ct_content {
+	padding: 20px 20px 0px;
+}
+
+#content #c_top #ct_content .hotkey {
+	float: right;
+}
+
+#content #c_middle {
+	padding: 17px 20px 0;
+	background: #f5f5f5;
+	min-height: 521px;
+	font-family: "Conv_SeroPro-Bold", sans-serif;
+	
+	
+	font: 22px "Conv_SeroPro-Bold", sans-serif;
 	color: #333;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#content #c_middle #cm_title {
+	padding: 0 0 0 50px;
+	background: url(../img/elements/icons_megahorn.png) left center no-repeat;
+}
+
+#content #c_middle .small_title {
+	font: 12px 'bebasneue_book', sans-serif;
+	color: #929292;
+	display: block;
+	padding: 0 0 2px;
+}
+
+/* Down Arrow */
+
+.down_arrow {
+	text-align: center;
+	height: 43px;
+}
+
+.down_arrow a {
+	text-decoration: none;
+}
+
+.down_arrow a img {
+	vertical-align: bottom;
+	width: 36px;
+	height: 32px;
+}
+
+/* lower form */
+
+#input_text_block {
+	margin-left: 535px;
+	padding: 4px 0 0;
+}
+
+#input_text_block .itb_title {
+	text-align: right;
+	width: 310px;
+}
+
+#input_text_block .input_text_wrap {
+	width: 310px;
+	height: 70px;
+	background: url(../img/elements/text_input.gif) left top no-repeat; /* Привычка от ie6 */
+	float: left;
+}
+
+#input_text_block .input_text_wrap input {
+	display: block;
+	width: 300px;
+	position: relative;
+	top: 10px;
+	left: 5px;
+	border: none;
+	background: none;
+	outline: none;
+	
+	font: 40px 'bebasneue_book', sans-serif;
+	color: #000;
+}
+
+.itb_sub {
+	float: left;
+	display: block;
+	margin-left: 10px;
+	
+	font: 30px 'bebasneue_book', sans-serif;
+	color: #c4c4c4;
+	padding: 42px 0 0;
+}
+
+/* Because of glowing of text */
+
+#btn_next {
+	float: right;
+	width: 93px;
+	height: 40px;
+	
+	position: relative;
+	top: -7px;
+}
+
+#btn_next img {
+	width: 93px;
+	height: 40px;
+	display: block;
+}
+
+/* Account Block */
+
+.account_block {
+	padding: 16px 0 30px;
+}
+
+.account_block .ab_select_wrap {
+	height: 64px;
+	border: 1px solid #929292;
+	margin: 3px 0 0 -5px;
 }
