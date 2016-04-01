@@ -11,5 +11,8 @@ function init() {
 		e.stopPropogation();
 	});
 	
+	$.getJSON('json/products.json', function(data) {
+		console.log(data);
+	});
 	
 }
