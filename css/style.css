@@ -238,13 +238,14 @@ input {
 }
 
 .ab_tooltip table {
-	margin: 14px 0 0;
+	margin: 3px 0 0;
 	border-collapse: collapse;
 }
 
 
 .ab_tooltip table td {
 	text-align: left;
+	padding: 12px 0 0;
 }
 
 .ab_tooltip table td.abt_title {
@@ -253,25 +254,7 @@ input {
 
 /* Clickable overlay */
 
-.abs_overlay {
-	position: absolute;
-	left: -1px;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	
-	cursor: pointer;
-	background: url(../img/elements/icons_arrow_d_dw.png) 98% center no-repeat;
-}
 
-.abs_overlay .abso_frame {
-	position: absolute;
-	bottom: 1px;
-	width: 100%;
-	height: 1px;
-	border: 1px solid #929292;
-	
-}
 
 /* Single object */
 
@@ -281,14 +264,42 @@ input {
 	font-size: 20px;
 }
 
-.abs_chosen_top {
+.abs_topwrap {
+	position: relative;
+	height: 64px;
+}
+
+.abs_object:hover {
 	background: #3fc33e;
 	background: -moz-linear-gradient(top,  #3fc33e 0%, #37ac36 100%);
 	background: -webkit-linear-gradient(top,  #3fc33e 0%,#37ac36 100%);
 	background: linear-gradient(to bottom,  #3fc33e 0%,#37ac36 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fc33e', endColorstr='#37ac36',GradientType=0 );
 	
+	border: 1px solid #4d9abf;
+	
 	color: white;
+}
+
+.abs_topwrap {
+	cursor: pointer;
+}
+
+.abs_topwrap:hover {
+	background: #3fc33e;
+	background: -moz-linear-gradient(top,  #3fc33e 0%, #37ac36 100%);
+	background: -webkit-linear-gradient(top,  #3fc33e 0%,#37ac36 100%);
+	background: linear-gradient(to bottom,  #3fc33e 0%,#37ac36 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fc33e', endColorstr='#37ac36',GradientType=0 );
+	
+	border: 1px solid #4d9abf;
+	
+	color: white;
+}
+
+.abs_topwrap .abs_object {	
+	cursor: pointer;
+	background: url(../img/elements/icons_arrow_d_dw.png) 98% center no-repeat;
 }
 
 .abs_object .abso_icon {
@@ -351,6 +362,16 @@ input {
 	font-size: 16px;
 }
 
+.abs_object .abso_state {
+	position: absolute;
+	top: 21px;
+	right: 16px;
+	width: 30px;
+	height: 30px;
+	background: url(../img/elements/icons_checked_black.png) left top no-repeat;
+	display: none;
+}
+
 /* hidden block */
 
 .abs_list_block {
@@ -365,18 +386,61 @@ input {
 	
 	display: none;
 	z-index: 10;
+	
+	max-height: 264px;
+	overflow: auto;
 }
 
 .absl_shown {
 	display: block;
 }
 
+.abs_list_block .abs_list_wrap {
+	border-top: 1px solid #29a137;
+}
+
 .abs_list_block .abs_object {
 	position: relative;
 	border: 1px solid #29a137;
-	height: 66px;
 	margin: -1px 0 0;
+	height: 66px;
 	cursor: pointer;
+}
+
+.abs_list_block .abs_object:hover {
+	border: 1px solid #4d9abf;
+}
+
+.abs_list_block .abs_object_chosen {
+	background: #e5e5e5;
+}
+
+.abs_list_block .abs_object_chosen:hover {
+	background: #3fc33e;
+	background: -moz-linear-gradient(top,  #3fc33e 0%, #37ac36 100%);
+	background: -webkit-linear-gradient(top,  #3fc33e 0%,#37ac36 100%);
+	background: linear-gradient(to bottom,  #3fc33e 0%,#37ac36 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fc33e', endColorstr='#37ac36',GradientType=0 );
+	
+	border: 1px solid #4d9abf;
+	
+	color: white;
+}
+
+.abs_list_block .abs_object_locked {
+	background: #e5e5e5;
+	border: 1px solid #29a137;
+	cursor: default;
+}
+
+.abs_list_block .abs_object_locked:hover {
+	background: #e5e5e5;
+	border: 1px solid #29a137;
+	color: black;
+}
+
+.abs_list_block .abs_object_chosen .abso_state {
+	display: block;
 }
 
 #content #c_middle .absl_title {
