@@ -1,6 +1,24 @@
-body {
+* {
 	padding: 0;
 	margin: 0;
+	outline: none;
+}
+
+
+a img {
+	border: none;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+html,body {
+	height: 100%;
+}
+
+body {
 	background: #b5b4c0;
 }
 
@@ -15,6 +33,7 @@ input {
 
 #container {
 	padding: 19px;
+	min-width: 900px;
 }
 
 .clear {
@@ -26,21 +45,18 @@ input {
 }
 
 #content {
-	width: 1187px;
-	
-	
-	
 	background: #e1e1e3;
+	
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+	
 	
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	behavior: url(border-radius.htc);
+	behavior: url(ie-css3.htc);
 	
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-/*	filter: progid:DXImageTransform.Microsoft.Shadow(color='#cccccc', Direction=0, Strength=3); */
 }
 
 
@@ -108,8 +124,10 @@ input {
 /* lower form */
 
 #input_text_block {
-	margin-left: 535px;
-	padding: 4px 0 0;
+	float: right;
+	position: relative;
+	right: 180px;
+	padding: 4px 0 20px;
 }
 
 #input_text_block .itb_title {
@@ -170,7 +188,7 @@ input {
 /* Account Block */
 
 .account_block {
-	padding: 16px 83px 30px 0;
+	padding: 16px 410px 30px 0;
 }
 
 .account_block .ab_select_wrap {
@@ -184,7 +202,7 @@ input {
 
 .ab_select_wrap .ab_tooltip {
 	position: absolute;
-	left: 1070px;
+	left: 100%;
 	top: -10px;
 	display: none;
 	
@@ -192,12 +210,14 @@ input {
 	width: 400px;
 	padding: 24px 21px 20px;
 	
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 10px #ccc;
+    -webkit-box-shadow: 0px 0px 10px #ccc;
+    box-shadow: 0px 0px 10px #ccc;
+	behavior: url(ie-css3.htc);
 	
 	font: 14px 'bebasneue_book', sans-serif;
 	color: #333;
+	z-index: 20;
 }
 
 .ab_select_wrap:hover .ab_tooltip {
@@ -335,7 +355,7 @@ input {
 	position: absolute;
 	left: -1px;
 	top: 64px;
-	width: 1067px;
+	width: 100%;
 	background: #f5f5f5;
 	border-left: 1px solid #29a137;
 	border-right: 1px solid #29a137;
