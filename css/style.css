@@ -297,9 +297,13 @@ input {
 	color: white;
 }
 
-.abs_topwrap .abs_object {	
+.abs_topwrap .abs_object {
 	cursor: pointer;
 	background: url(../img/elements/icons_arrow_d_dw.png) 98% center no-repeat;
+}
+
+.abs_topwrap .abs_object:hover {
+	margin: -2px;
 }
 
 .abs_object .abso_icon {
@@ -386,9 +390,10 @@ input {
 	
 	display: none;
 	z-index: 10;
-	
+/*	
 	max-height: 264px;
-	overflow: auto;
+	overflow: visible;
+	*/
 }
 
 .absl_shown {
@@ -397,6 +402,7 @@ input {
 
 .abs_list_block .abs_list_wrap {
 	border-top: 1px solid #29a137;
+	height: 264px;
 }
 
 .abs_list_block .abs_object {
@@ -446,4 +452,19 @@ input {
 #content #c_middle .absl_title {
 	padding: 2px 5px 6px 12px;
 	border-bottom: 1px solid #29a137;
+}
+
+.scroll-pane {
+    width: 700px; /* Ширина видимой области*/
+    height: 275px; /* Высота видимой области*/
+    overflow: auto; /* Если отключены скрипты это правило позволит отобразить обычный скролл */
+}
+
+
+/* ScrollPane */
+
+.scroll-pane {
+/*	width: 400px;  Ширина видимой области*/
+	height: 275px; /* Высота видимой области*/
+	overflow: auto; /* Если отключены скрипты это правило позволит отобразить обычный скролл */
 }

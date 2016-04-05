@@ -12,14 +12,17 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="icon" type="image/gif" href="favicon.gif" />
 
+  <link type="text/css" rel="stylesheet" href="css/jquery.custom-scrollbar.css"/>
   
   <link rel="stylesheet" type="text/css" href="css/fontsheet.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   
   <script type="text/javascript" src="js/jquery-1.12.1.js"></script>
+  <script type="text/javascript" src="js/jquery.custom-scrollbar.js"></script>
+
   <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" language="javascript" src="json/products.json"></script> 
-	
+  <script type="text/javascript" language="javascript" src="json/products.json"></script>
+  
 </head>
 <body>
 	<div id="container">
@@ -50,7 +53,7 @@
 								</div>
 								
 								<div class="abs_list_block">
-									<div class="abs_list_wrap">
+									<div id="vertical-scrollbar-demo" class="default-skin abs_list_wrap">
 										
 									</div>
 								</div>
@@ -101,7 +104,7 @@
 								</div>
 								
 								<div class="abs_list_block">
-									<div class="abs_list_wrap">
+									<div id="vertical-scrollbar-demo" class="default-skin abs_list_wrap">
 										
 									</div>
 								</div>
@@ -155,8 +158,9 @@
 					</div>
 				</div>
 			</section>
-		
+	
 	</div>
+	
 	<script>
 		init();
     </script>

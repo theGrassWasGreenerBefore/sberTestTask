@@ -15,6 +15,10 @@ function init() {
 		/* hide another */
 		$('#'+reverseAss[pnd.id]).find('.abs_list_block').hide();
 		
+		var alw = [];
+		alw = $(alb[0]).find('.abs_list_wrap');
+	//	$(alw[0]).customScrollbar();
+		
 		e.stopPropagation();
 	});
 	
@@ -109,7 +113,7 @@ function initJSON() {
 				tempObj1level.appendChild(tempObj2level);
 				
 				/* reaction */
-				tempObj1level.onclick = function(){objectClicked(this);};
+				tempObj1level.onclick = function(e){objectClicked(this,e);};
 				tempObj1level.onmouseover = function(){objectHover(this);};
 				
 				/* obj to list */
@@ -132,7 +136,7 @@ function initJSON() {
 }
 
 /* Choosing object */
-function objectClicked(thisObj) {
+function objectClicked(thisObj,evt) {
 	if ((!$(thisObj).hasClass('abs_object_chosen'))&&(!$(thisObj).hasClass('abs_object_locked'))) {
 		var pnd = thisObj.parentNode; // abs_list_wrap
 		
@@ -153,6 +157,8 @@ function objectClicked(thisObj) {
 		
 		
 		chooseBlock(thisObj,pnd.id);
+	} else {
+		evt.stopPropagation();
 	}
 }
 
